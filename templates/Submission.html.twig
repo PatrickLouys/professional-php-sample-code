@@ -1,0 +1,14 @@
+{% extends 'Layout.html.twig' %}
+
+{% block content %}
+    {% include 'FlashMessages.html.twig' %}
+
+    <form method="post" action="">
+        <label for="submission-title">Title</label>
+        <input type="text" name="title" id="submission-title"><br>
+        <label for="submission-url">URL</label>
+        <input type="url" name="url" id="submission-url"><br>
+        <input type="hidden" name="token" value="{{ get_token('submission') }}"><br>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

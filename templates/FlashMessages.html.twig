@@ -1,0 +1,7 @@
+{% for message in get_flash_bag().get('errors') %}
+    <span style="color:red">{{ message }}</span><br>
+{% endfor %}
+
+{% for message in get_flash_bag().get('success') %}
+    <span style="color:green">{{ message }}</span><br>
+{% endfor %}

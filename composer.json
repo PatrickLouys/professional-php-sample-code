@@ -1,0 +1,18 @@
+{
+  "require": {
+    "php": "~7.2.0",
+    "symfony/http-foundation": "^4.0",
+    "tracy/tracy": "^2.4",
+    "nikic/fast-route": "^1.2",
+    "twig/twig": "^2.4",
+    "rdlowrey/auryn": "^1.4",
+    "doctrine/dbal": "^2.6",
+    "ramsey/uuid": "^3.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "SocialNews\\": "src/",
+      "Migrations\\": "migrations/"
+    }
+  }
+}
