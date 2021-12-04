@@ -28,10 +28,10 @@ final class Migration201704151205
     private function createSubmissionsTable(Schema $schema): void
     {
         $table = $schema->createTable('submissions');
-        $table->addColumn('id', Type::GUID);
-        $table->addColumn('title', Type::STRING);
-        $table->addColumn('url', Type::STRING);
-        $table->addColumn('creation_date', Type::DATETIME);
-        $table->addColumn('author_user_id', Type::GUID);
+        $table->addColumn('id', 'guid', []);
+        $table->addColumn('title', 'string', []);
+        $table->addColumn('url', 'string', []);
+        $table->addColumn('creation_date', 'datetime', []);
+        $table->addColumn('author_user_id', 'guid', []);
     }
 }
