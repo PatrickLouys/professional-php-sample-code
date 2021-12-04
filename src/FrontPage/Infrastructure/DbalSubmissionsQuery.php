@@ -32,8 +32,8 @@ final class DbalSubmissionsQuery implements SubmissionsQuery
         );
         $qb->orderBy('submissions.creation_date', 'DESC');
 
-        $stmt = $qb->execute();
-        $rows = $stmt->fetchAll();
+        $stmt = $qb->executeQuery();
+        $rows = $stmt->fetchAllAssociative();
 
         $submissions = [];
         foreach ($rows as $row) {
